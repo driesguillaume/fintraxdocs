@@ -1,0 +1,46 @@
+.twoCol .collection .collection-head{
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.collection-head {
+  background: #F5F5F5;
+}
+
+.collection-head h2 a {
+  color: #2e539f;
+}
+
+.collection-head h2 a:hover {
+  text-decoration: none;
+}
+
+.nav li {
+  font-size: 16px;
+}
+
+#searchBar button {
+  background-color: #7dbc6c;
+  border-color: #7dbc6c;
+}
+
+#searchBar button:hover {
+  background-color: #7dbc6c;
+  border-color: #7dbc6c;
+}
+
+input:focus, input[type=text]:focus {
+  border-color: rgba(125,188,108,.7);
+}
+
+.threeCol h2 a {
+  border-bottom: 0;
+}
+
+.threeCol h2 a:hover {
+  color: EEE;
+}
+
+.collection-body {
+  height: 100%;
+}
