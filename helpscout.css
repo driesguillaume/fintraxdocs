@@ -2,10 +2,24 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,400i,500,700');
 /* */
 
-body {
-  background: #fbfbfc;
+html, body{
+  height: 100%;
 }
+
+body {
+  background: rgb(6,87,146);
+  background: linear-gradient(45deg, rgba(6,87,146,1) 0%, rgba(18,29,47,1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
 /* Home Page Title */
+
+.contentWrapper {
+  border-radius: 8px;
+}
 
 #docsSearch h1 {
   font-size: 32px;
@@ -23,25 +37,34 @@ body {
   font-size: 13px;
   letter-spacing: .1em;
 }
-.navbar .nav li a, .navbar .icon-private-w {
+
+.navbar .brand,
+.navbar .nav li a,
+.navbar .nav li a:hover,
+.navbar .nav li a:focus,
+.navbar .nav .active a,
+.navbar .nav .active a:hover,
+.navbar .nav .active a:focus,
+.navbar .icon-private-w {
+  color:  #2e539f;
   font-size: 14px;
-    font-weight: 300;
+  font-weight: 300;
 }
 
 /* Header Size */
 
 a.brand > img {
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  height: 60px;
-  margin-left: 15px;
-  width: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    height: 30px;
+    margin: 32px;
+    width: auto;
 }
 
 .navbar .navbar-inner {
   /* background: #ffffff; */
-  height: 60px;
+  height: 90px;
 }
 .navbar .navbar-inner .container-fluid {
   padding: 0;
@@ -57,14 +80,16 @@ a.brand > img {
   color: #777;
   text-shadow: 0 1px 0 #fff;
 }
+
 /* Home Page Search Bar Background */
 
 #docsSearch {
-  background: #ffffff;
+  background: #F7F7F7;
   border-top: 1px solid #dadada;
   margin-bottom: 3em;
   padding: 1.5em 0;
 }
+
 /* Search Input Box */
 
 input.search-query {
@@ -81,6 +106,7 @@ input.search-query {
   font-weight: 100;
   letter-spacing: 1px;
 }
+
 /* Home Page Category Title*/
 
 .category-list h3 {
@@ -113,12 +139,11 @@ input.search-query {
   width: 31.5%;
   transition: all 0.2s;
 }
+
 .category-list .category:hover {
   text-decoration: none;
   background: #f7f7f9;
 }
-
-
 
 .collection-category h2 {
     font-weight: 500;
@@ -141,8 +166,6 @@ input.search-query {
     text-align: center;
 }
 
-
-
 /* Home Page Link Style */
 
 #serp-dd .result a, #serp-dd .result>li.active, #full-Article strong a, .collection a, .contentWrapper a, .most-pop-articles .popArticles a, .most-pop-articles .popArticles a span, .category-list .category .article-count, .category-list .category .article-count, .contentWrapper a {
@@ -155,6 +178,7 @@ input.search-query {
   sans-serif;
   font-weight: 500;
 }
+
 #serp-dd .result a:hover, #serp-dd .result>li.active, #full-Article strong a, .collection a, .contentWrapper a, .most-pop-articles .popArticles a, .most-pop-articles .popArticles a:hover span, .category-list .category .article-count, .category-list .category:hover .article-count, .contentWrapper a {
   font-weight: 500;
   letter-spacing: .25px;
@@ -165,6 +189,7 @@ input.search-query {
   sans-serif;
   font-weight: 500;
 }
+
 /* Home Page Search Button */
 
 #searchBar button {
@@ -178,11 +203,13 @@ input.search-query {
   height: 50px;
   position: absolute;
 }
+
 #searchBar button:hover {
   background: #2dd3fd;
   text-shadow: 0 0px 0px rgba(255,255,255,.0);
   border: 1px solid #2ad7d7;
 }
+
 input, button, select, textarea {
   font-family: "Open Sans",
   sans-serif,
@@ -191,7 +218,6 @@ input, button, select, textarea {
   Arial,
   sans-serif;
 }
-
 
 /* Category Images */
 
@@ -224,7 +250,6 @@ input, button, select, textarea {
 /* etc... keep going and add one CSS ID selector for each category. */
 
 
-
 /* Side Bar Styles */
 
 #sidebar .nav-list a {
@@ -238,6 +263,7 @@ input, button, select, textarea {
   sans-serif;
   font-weight: 300;
 }
+
 #sidebar .nav-list .active a, #sidebar .nav-list .active a:hover, #sidebar .nav-list .active a:focus {
   font-weight: 500;
   color: #06b9dd;
@@ -245,6 +271,7 @@ input, button, select, textarea {
   text-shadow: none;
   text-decoration: underline;
 }
+
 #sidebar h3 {
   text-transform: uppercase;
   font-size: 16px;
@@ -255,21 +282,46 @@ input, button, select, textarea {
   sans-serif;
   letter-spacing: 2px;
 }
+
 /* Article Styles */
 
+#serp-dd.sb {
+    top: 38px;
+    width: 350px;
+    border-radius: 0 5px 5px;
+}
+
 #main-content {
-    background: none;
-    float: right;
-    margin-bottom: 2em;
-    padding: 32px 0 0 28px;
+  background: none;
+  margin-bottom: 2em;
+  padding: 32px 40px 60px 0;
+  float: none;
+}
+
+.row-fluid .span9 {
+  width: 100%;
+  top: 50px !important;
+  position: absolute;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px){
+  .row-fluid .span9 {
+    width: 100%;
+    top: 50px !important;
+    position: absolute;
+    margin-bottom: 30px;
+  }
 }
 
 #fullArticle img {
     display: block;
     margin: 1em 0 2em;
     padding: 4px;
-    border-radius: 4px;
+    border-radius: 8px;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #fullArticle .title, .contentWrapper h1 {
@@ -279,11 +331,13 @@ input, button, select, textarea {
   color: #7dbc6c;
   font-weight: 700;
 }
+
 #fullArticle .printArticle {
   position: absolute;
   right: 46px;
   top: 40px;
 }
+
 #fullArticle, #fullArticle p, #fullArticle ul, #fullArticle ol, #fullArticle li, #fullArticle div, #fullArticle blockquote, #fullArticle dd, #fullArticle table {
   color: #7e8287;
   font-family: "Open Sans",
@@ -292,6 +346,7 @@ input, button, select, textarea {
   font-weight: 300;
   letter-spacing: .01em;
 }
+
 #categoryHead .sort select {
   width: 150px;
   height: 24px;
@@ -303,6 +358,7 @@ input, button, select, textarea {
   sans-serif;
   font-weight: 300;
 }
+
 /* Style this one if you want bolded article text to have a different color */
 
 #fullArticle strong {
@@ -365,22 +421,22 @@ footer p span {
   display: none;
 }
 
-
 /* Contact Modal */
 
 #contactModal h2, .abuse h2 {
   background: #fff;
   margin: 0;
-  padding: 11px 0 10px 18px;
+  padding: 20px 0 20px 18px;
   font-size: 22px;
   border-bottom: 1px solid #ccc;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   font-family: "Open Sans",
   sans-serif;
-  color: #58A4B0;
-  font-weight: 300;
+  color: #2e539f;
+  font-weight: 400;
 }
+
 #contactModal .control-label {
   width: 110px;
   font-family: "Open Sans",
@@ -438,6 +494,7 @@ footer p span {
     width: 100%;
   }
 }
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -458,6 +515,7 @@ footer p span {
     margin-left: 0;
   }
 }
+
 @media (max-width: 480px) {
   #searchBar button {
     color: transparent;
@@ -482,6 +540,7 @@ footer p span {
     background-color: transparent;
   }
 }
+
 @media (max-width: 480px) {
   #fullArticle .title, .contentWrapper h1 {
     font-size: 24px;
@@ -490,7 +549,6 @@ footer p span {
     font-size: 20px;
   }
 }
-
 
 /* Collection Titles  */
 .collection-category h2 a {
@@ -506,30 +564,21 @@ footer p span {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
 .twoCol .collection .collection-head{
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .collection-head {
-  background: #F5F5F5;
+  background: #87b870;
 }
 
 .collection-head h2 a {
-  color: #2e539f;
+  color: #FFF;
 }
 
 .collection-head h2 a:hover {
+  color: #EEE;
   text-decoration: none;
 }
 
@@ -563,3 +612,48 @@ input:focus, input[type=text]:focus {
   height: 100%;
 }
 
+.twoCol p {
+  color: #E7E7E7;
+}
+
+.twoCol .collection, .threeCol .collection {
+  border: none;
+  border-radius: 8px;
+}
+
+.twoCol .collection .collection-head, .twoCol .collection .collection-body {
+  padding: 0.5em 3em 1em;
+}
+
+h1, h2, h3 {
+  line-height: 6px;
+}
+
+.navbar .nav>li>a {
+  padding: 0px 20px;
+}
+
+footer p {
+  color: #FFF;
+}
+
+footer p a {
+  color: #FFF;
+}
+
+footer p a:hover {
+  color: #EEE;
+}
+
+.navbar .nav li a:hover {
+    color: #777;
+}
+
+#sidebar {
+    margin: 32px 0 0;
+    position: absolute;
+}
+
+footer {
+  display: none;
+}
