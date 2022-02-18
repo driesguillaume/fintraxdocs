@@ -564,13 +564,10 @@ footer p span {
     text-align: center;
 }
 
-.twoCol .collection .collection-head{
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
 .collection-head {
   background: #87b870;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .collection-head h2 a {
@@ -612,7 +609,7 @@ input:focus, input[type=text]:focus {
   height: 100%;
 }
 
-.twoCol p {
+.twoCol p, .threeCol p {
   color: #E7E7E7;
 }
 
